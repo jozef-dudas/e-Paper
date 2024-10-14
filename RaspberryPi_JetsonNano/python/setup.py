@@ -3,7 +3,7 @@ from setuptools import setup
 
 dependencies = ['Pillow']
 
-if os.path.exists('/sys/bus/platform/drivers/gpiomem-bcm2835'):
+if os.path.exists('/sys/bus/platform/drivers/rpi-gpiomem'):
     dependencies += ['RPi.GPIO', 'spidev']
 elif os.path.exists('/sys/bus/platform/drivers/gpio-x3'):
     dependencies += ['Hobot.GPIO', 'spidev']
